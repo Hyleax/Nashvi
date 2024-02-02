@@ -1,4 +1,4 @@
-import { AnswerOptions, AudioPlayer, Question } from "@/components/TrainingComponents";
+import { AnswerOptions, AudioPlayer, Question } from "@/components/TrainingPageComponents";
 import { l_spartan } from "@/fonts";
 import { ChordQuestionContextProvider } from "@/context/ChordQuestionContextProvider";
 

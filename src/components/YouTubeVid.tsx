@@ -3,7 +3,7 @@ import YouTube, { YouTubeProps } from 'react-youtube'
 
 
 
-export const YouTubeVid = () => {
+const YouTubeVid = () => {
 
     const onPlayerReady: YouTubeProps['onReady'] = (event) => {
         // access to player in all event handlers via event.target
