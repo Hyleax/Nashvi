@@ -1,5 +1,5 @@
 import TrainBtn from "@/components/TrainBtn";
-import YouTubeVideoComponent from "@/components/YoutubeVid";
+import YouTubeVideoComponent from "@/components/YoutubeVideoComponent";
 import { l_spartan } from "@/fonts";
 
 
