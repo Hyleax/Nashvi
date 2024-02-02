@@ -1,5 +1,5 @@
 "use client"
-import YouTube, {YouTubeProps} from 'react-youtube'
+import YouTube, { YouTubeProps } from 'react-youtube'
 
 
 

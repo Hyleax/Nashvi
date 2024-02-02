@@ -1,7 +1,6 @@
 import TrainBtn from "@/components/TrainBtn";
 import YouTubeVid from "@/components/YoutubeVid";
 import { l_spartan } from "@/fonts";
-import { Suspense } from "react";
 
 
 export default function Home() {
