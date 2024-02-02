@@ -1,5 +1,5 @@
 import TrainBtn from "@/components/TrainBtn";
-import YouTubeVid from "@/components/YoutubeVid";
+import YouTubeVideoComponent from "@/components/YoutubeVid";
 import { l_spartan } from "@/fonts";
 
 
@@ -22,7 +22,7 @@ export default function Home() {
         </div>
 
           <div className="lg:block hidden">
-            <YouTubeVid/>
+            <YouTubeVideoComponent/>
           </div>
       </div>
     </main>
