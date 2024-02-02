@@ -1,9 +1,9 @@
 "use client"
-
-import React from 'react'
 import YouTube, {YouTubeProps} from 'react-youtube'
 
-const YouTubeVid = () => {
+
+
+export const YouTubeVid = () => {
 
     const onPlayerReady: YouTubeProps['onReady'] = (event) => {
         // access to player in all event handlers via event.target

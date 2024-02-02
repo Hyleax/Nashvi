@@ -1,5 +1,5 @@
 import TrainBtn from "@/components/TrainBtn";
-import YouTubeVid from "@/components/YouTubeVid";
+import YouTubeVid from "@/components/YoutubeVid";
 import { l_spartan } from "@/fonts";
 import { Suspense } from "react";
 
