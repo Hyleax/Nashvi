@@ -144,8 +144,10 @@ export const pickRandomChord = () => {
  * @returns true if the user provided chord is the same as the correct one
  */
 export const checkCorrectChord = (keyName: string, userChosenChordNumber: number, correctChordName: string) => {
-    const userChosenChord = allChordNumbers[keyName][userChosenChordNumber]
+    const chord = allChordNumbers[keyName][userChosenChordNumber]
+    if (chord?.chordName === correctChordName) {
+        return true
+    }
 
-    if (userChosenChord.chordName !== correctChordName) return false
-    return true
+    return false
 }

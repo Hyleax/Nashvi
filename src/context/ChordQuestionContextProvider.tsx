@@ -7,10 +7,9 @@ type ChordQuestionContext ={
         keyName: string;
         pickedChord: Chord;
     } | null
-    setChordQuestion: React.Dispatch<React.SetStateAction<{
-        keyName: string;
-        pickedChord: Chord;
-    } | null>> 
+    getNewChord: () => void
+    isAnswered: boolean
+    revealAnswer: () => Promise<void>
 }
 export const ChordQuestionContext = createContext<ChordQuestionContext>({} as ChordQuestionContext)
 
@@ -26,12 +25,25 @@ export const ChordQuestionContextProvider = ({ children }: ChordQuestionContextP
     } | null>
     (null)
 
+    const [isAnswered, setIsAnswered] = useState(false)
+
     useEffect(() => {
         setChordQuestion(pickRandomChord())
     }, [])
 
+
+    const getNewChord = () => {
+        setChordQuestion(pickRandomChord())
+    }
+
+    const revealAnswer = async() => {
+        setIsAnswered(true)
+        await new Promise(resolve => setTimeout(resolve, 4000))
+        setIsAnswered(false)
+    }
+
     return(
-        <ChordQuestionContext.Provider value={{ chordQuestion, setChordQuestion }}>
+        <ChordQuestionContext.Provider value={{ chordQuestion, getNewChord, isAnswered, revealAnswer}}>
             {children}
         </ChordQuestionContext.Provider>
     )
