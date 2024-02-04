@@ -32,11 +32,7 @@ const notes =  {
   "B3": "B3.mp3",
 }
 
-const piano = new toneObject.Sampler({
-  urls: notes,
-  release: 1,
-  baseUrl: '/samples/piano/'
-}).toDestination()
+
 
 const pinkBG = "rounded-xl shadow-lg bg-pink-400 hover:bg-pink-500 p-2 text-3xl font-semibold"
 const orangeBG = "rounded-xl shadow-lg bg-orange-500 hover:bg-orange-600 p-2 text-3xl font-semibold"
@@ -93,11 +89,18 @@ export const AudioPlayer = () => {
     const keyName = chordQuestion?.keyName
     const chordName = chordQuestion?.pickedChord.chordName
     // const correctChordNumber = chordQuestion?.pickedChord.numberName
+    
+    const [piano, setPiano] = useState<Tone.Sampler | null>(null)
 
 
-    // useEffect(() => {
-
-    // },[])
+    useEffect(() => {
+      const piano = new toneObject.Sampler({
+        urls: notes,
+        release: 1,
+        baseUrl: '/samples/piano/'
+      }).toDestination()
+      setPiano(piano)
+    },[])
 
 
     const handleClick = (chordName: string) => {
