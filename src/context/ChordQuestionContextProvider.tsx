@@ -1,6 +1,6 @@
 "use client"
 import { createContext, useEffect, useState } from "react"
-import { Chord, pickRandomChord } from "@/chords";
+import { Chord, pickRandomChord } from "@/utils/chords";
 
 type ChordQuestionContext ={
     chordQuestion: {
@@ -38,7 +38,7 @@ export const ChordQuestionContextProvider = ({ children }: ChordQuestionContextP
 
     const revealAnswer = async() => {
         setIsAnswered(true)
-        await new Promise(resolve => setTimeout(resolve, 4000))
+        await new Promise(resolve => setTimeout(resolve, 2000))
         setIsAnswered(false)
     }
 

@@ -1,6 +1,6 @@
 import TrainBtn from "@/components/TrainBtn";
 import YouTubeVideoComponent from "@/components/YoutubeVideoComponent";
-import { l_spartan } from "@/fonts";
+import { l_spartan } from "@/utils/fonts";
 
 
 export default function Home() {

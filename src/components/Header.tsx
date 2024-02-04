@@ -2,7 +2,7 @@ import Image from 'next/image'
 import React from 'react'
 import logo from '../../public/nashvi2.png'
 import Link from 'next/link'
-import { l_spartan } from '@/fonts'
+import { l_spartan } from '@/utils/fonts'
 
 const Header = () => {
   return (

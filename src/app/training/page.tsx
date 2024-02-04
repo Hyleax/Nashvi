@@ -1,5 +1,5 @@
 import { AnswerOptions, AudioPlayer, Question } from "@/components/TrainingPageComponents";
-import { l_spartan } from "@/fonts";
+import { l_spartan } from "@/utils/fonts";
 import { ChordQuestionContextProvider } from "@/context/ChordQuestionContextProvider";
 
 const chordNumbers = [1,2,3,4,5,6,7]

@@ -1,6 +1,6 @@
 "use client"
 import React from 'react'
-import { l_spartan } from '@/fonts'
+import { l_spartan } from '@/utils/fonts'
 import { motion } from 'framer-motion'
 import Link from 'next/link'
 
