@@ -8,6 +8,8 @@ import useChordQuestion from "@/hooks/useChordQuestion";
 import { useEffect, useState } from "react";
 import { checkCorrectChord } from "@/utils/chords";
 import { playSample } from "@/utils/samples";
+import * as Tone from "tone"
+
 
 const pinkBG = "rounded-xl shadow-lg bg-pink-400 hover:bg-pink-500 p-2 text-3xl font-semibold"
 const orangeBG = "rounded-xl shadow-lg bg-orange-500 hover:bg-orange-600 p-2 text-3xl font-semibold"

@@ -6,7 +6,7 @@ import * as Tone from "tone"
 export const toneObject = Tone
 
 // JS object to map note to MP3 file
-const notes =  {
+export const notes =  {
     "C3": "C3.mp3",
     "C#3": "Cs3.mp3",
     "Db3": "Cs3.mp3",
