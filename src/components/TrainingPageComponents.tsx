@@ -67,7 +67,6 @@ export const AudioPlayer = () => {
 
 
     const handleClick = (chordName: string) => {
-      console.log(chordName)
       const octave = 3
       playSample(`${chordName}${octave}`)
     }

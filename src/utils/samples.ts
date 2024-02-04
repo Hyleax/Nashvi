@@ -1,4 +1,4 @@
-
+"use client"
 
 import * as Tone from "tone"
 
