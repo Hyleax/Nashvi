@@ -129,7 +129,7 @@ export const AudioPlayer = () => {
               </motion.span>
 
 
-              <motion.span onClick={() => handleClick(keyName as string)} whileHover={{ scale: 1.2 }} className="md:hidden block cursor-pointer hover:text-slate-200">
+              <motion.span onClick={() => handleClick(chordName as string)} whileHover={{ scale: 1.2 }} className="md:hidden block cursor-pointer hover:text-slate-200">
                   <FaRegCirclePlay size={50}/>
               </motion.span>
               <h2 className="md:text-4xl text-xl">Play chord</h2>
