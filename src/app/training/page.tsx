@@ -1,3 +1,4 @@
+"use client"
 import { AnswerOptions, AudioPlayer, Question } from "@/components/TrainingPageComponents";
 import { l_spartan } from "@/utils/fonts";
 import { ChordQuestionContextProvider } from "@/context/ChordQuestionContextProvider";

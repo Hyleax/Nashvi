@@ -66,6 +66,11 @@ export const AudioPlayer = () => {
     // const correctChordNumber = chordQuestion?.pickedChord.numberName
 
 
+    useEffect(() => {
+
+    },[])
+
+
     const handleClick = (chordName: string) => {
       const octave = 3
       playSample(`${chordName}${octave}`)
