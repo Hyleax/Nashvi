@@ -28,7 +28,7 @@ const notes =  {
     "G#3": "Gs3.mp3",
     "Ab3": "Gs3.mp3",
     "A3": "A3.mp3",
-    "AB3": "A3.mp3",
+    "Bb3": "As3.mp3",
     "B3": "B3.mp3",
 }
 
@@ -132,7 +132,7 @@ export const AudioPlayer = () => {
               <motion.span whileHover={{ scale: 1.2 }} className="md:hidden block cursor-pointer hover:text-slate-200">
                   <FaRegCirclePlay size={50}/>
               </motion.span>
-              <h2 className="md:text-4xl text-xl">Play note</h2>
+              <h2 className="md:text-4xl text-xl">Play chord</h2>
             </div>
         </div>
     )
