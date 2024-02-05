@@ -13,7 +13,7 @@ const Header = () => {
                 <Image src={ logo } alt='logo' width={140} height={140} className=' mt-3 '/>
             </Link>
 
-            <Link href={'/training'}>
+            <Link href={'/menu'}>
               <button className={`bg-red-400 md:px-6 px-3 py-2 mr-6 rounded-full text-white font-semibold
                 ${l_spartan.className} md:text-xl text-sm hover:bg-red-500 shadow-md tracking-wide`}>
                   Time to Train

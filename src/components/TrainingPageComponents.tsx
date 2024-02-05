@@ -86,7 +86,6 @@ export const AudioPlayer = () => {
     const { chordQuestion } = useChordQuestion()
     const keyName = chordQuestion?.keyName
     const chordName = chordQuestion?.pickedChord.chordName
-    // const correctChordNumber = chordQuestion?.pickedChord.numberName
     
     const [piano, setPiano] = useState({} as Tone.Sampler)
 
