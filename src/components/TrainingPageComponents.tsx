@@ -45,10 +45,15 @@ const errorBG = "rounded-xl shadow-lg bg-red-600 p-2 text-3xl font-semibold"
 export const AnswerOptions = ({ chordNumber, optionNum }: { chordNumber: number, optionNum: number }) => {
 
   const [btnClassNames, setBtnClassNames] = useState("")
-  const { chordQuestion, getNewChord, isAnswered, revealAnswer } = useChordQuestion()
+  const { chordQuestion, getNewChord, isAnswered, revealAnswer, incrementScore } = useChordQuestion()
 
 
-    const handleClick = async() => {
+    const handleClick = async(selectedOption: number) => {
+      const isCorrectChord = checkCorrectChord(chordQuestion?.keyName as string, optionNum + 1, chordQuestion?.pickedChord.chordName as string)
+      if (isCorrectChord) {
+        incrementScore()
+      }
+
       await revealAnswer()
       getNewChord()
     }
@@ -63,7 +68,9 @@ export const AnswerOptions = ({ chordNumber, optionNum }: { chordNumber: number,
 
       if (isAnswered) {
         const isCorrectChord = checkCorrectChord(chordQuestion?.keyName as string, optionNum + 1, chordQuestion?.pickedChord.chordName as string)
-        if (isCorrectChord) setBtnClassNames(successBG)
+        if (isCorrectChord) {
+          setBtnClassNames(successBG)
+        }
         else setBtnClassNames(errorBG)
       } else {
         reColorBtns()
@@ -74,7 +81,7 @@ export const AnswerOptions = ({ chordNumber, optionNum }: { chordNumber: number,
     }, [isAnswered])
   
     return(
-      <motion.button onClick={() => handleClick()} whileHover={{ scale: 1.1 , x: 40}} className={ btnClassNames }>
+      <motion.button onClick={() => handleClick(optionNum + 1)} whileHover={{ scale: 1.1 , x: 40}} className={ btnClassNames }>
         { chordNumber }
       </motion.button>
     )

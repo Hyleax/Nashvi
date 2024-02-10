@@ -7,7 +7,7 @@ import { l_spartan } from '@/utils/fonts'
 const Header = () => {
   return (
     <header className=' from-indigo-800 via-indigo-900 to-indigo-950
-        h-20 flex text-white justify-center shadow-lg mb-4 '>
+        h-20 flex text-white justify-center shadow-lg '>
         <div className="container flex justify-between items-center">
             <Link href={'/'}>
                 <Image src={ logo } alt='logo' width={140} height={140} className=' mt-3 '/>
